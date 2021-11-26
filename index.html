@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LJ PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Font galing sa google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    />
+
+    <!--Galing sa Fontawesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Josefin Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      /* width */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #ff4407;
+        border-radius: 10px;
+      }
+
+      /* Span */
+      span {
+        color: #ff4407;
+      }
+
+      /* Navbar */
+      .navbar {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../img/background.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .logo {
+        color: white;
+        font-size: 35px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      .content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+      }
+
+      h4 {
+        color: #fcfc;
+        letter-spacing: 2px;
+        font-size: 20px;
+      }
+
+      h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 75px;
+      }
+
+      h3 {
+        color: white;
+        font-size: 25px;
+        margin-bottom: 50px;
+      }
+
+      nav {
+        top: 0;
+        position: sticky;
+        background-color: #9546cb;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 10px 8%;
+      }
+
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 25px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      nav ul li a:hover {
+        color: #ff4407;
+        transition: 0.4s;
+      }
+
+      /* Navbar END */
+
+      /* About me Lowell */
+      .about {
+        width: 100%;
+        padding: 100px 0px;
+        background-color: #191919;
+      }
+
+      .about img {
+        height: auto;
+        width: 430px;
+        border-radius: 4px;
+      }
+
+      .about-text {
+        width: 550px;
+      }
+
+      .about-main {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .about-text h2 {
+        color: white;
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+      }
+
+      .about-text h5 {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+      }
+
+      .about-text p {
+        color: #fcfc;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 18px;
+        margin-bottom: 45px;
+      }
+
+      /* About Me END */
+
+      /* skill */
+      .skill {
+        background: #101010;
+        width: 100%;
+        padding: 100px 0px;
+      }
+
+      .skill-title h2 {
+        color: white;
+        font-size: 75px;
+        width: 1130px;
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .skill-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+      .skill-card {
+        height: 365px;
+        width: 335px;
+        padding: 20px 35px;
+        background: #191919;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .skill-card i {
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0px;
+        color: #9546cb;
+      }
+      /* skill end*/
+      h5 {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 15px;
+      }
+
+      .skill-text p {
+        color: #fcfc;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 25px;
+      }
+
+      /* Contact Us */
+      .contact-me {
+        width: 100%;
+        height: 290px;
+        background: #191919;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-me p {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      .contact-me .contact-button {
+        background-color: #9546cb;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: 0.4s;
+      }
+
+      .contact-me .contact-button:hover {
+        background-color: transparent;
+        border: 2px solid #9546cb;
+        cursor: pointer;
+      }
+
+      /* icon */
+      .icon {
+        background: #101010;
+        width: 100%;
+        padding: 10px 0px;
+        margin-bottom: 0px;
+      }
+
+      .icon-title h2 {
+        color: white;
+        font-size: 60px;
+        width: 1130px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+
+      .icon1 {
+        height: 200px;
+        width: 200px;
+      }
+
+      /* skill */
+      .icon-card {
+        height: 250px;
+        width: 335px;
+        padding: 25px 35px;
+        background: #191919;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .icon-text img {
+        color: #fcfc;
+        font-size: 16px;
+      }
+      /* Contact Us END */
+      /* Footer */
+      footer {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background: #191919;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer p:nth-child(1) {
+        font-size: 30px;
+        color: white;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      footer p:nth-child(2) {
+        color: white;
+        font-size: 17px;
+        width: 500px;
+        text-align: center;
+        line-height: 26px;
+      }
+
+      /* Social icons */
+      .social {
+        display: flex;
+      }
+
+      .social a {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #9546cb;
+        border-radius: 50%;
+        margin: 22px 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .social a:hover {
+        transform: scale(1.3);
+        transition: 0.3s;
+      }
+
+      .end {
+        position: absolute;
+        color: #9546cb;
+        bottom: 35px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!----hero Section start---->
+
+    <div class="navbar">
+      <nav>
+        <h2 class="logo">LJ <span>Portfolio</span></h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#contact-me">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <h4>Hello, my name is</h4>
+        <h1>BROSOTO <span>LOWELLJAY</span></h1>
+        <h3>I'am a Student in LEMERY COLLEGE.</h3>
+      </div>
+    </div>
+    <!----About section start---->
+    <section class="about">
+      <div class="about-main">
+        <img src="img/main-img1.jpg" alt="profile" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <h5>Rookie <span>& Designer</span></h5>
+          <p>
+            I am <span>Lowell Jay Brosoto</span> Major in
+            <span>Bachelor of Science in Information Technology</span> 2ndyear
+            college in <span>Lemery College</span> and 22 years old from sanluis
+            batangas.I have Intermidiate learning in web designing and basic
+            knowlede in <span>Visual Basic</span> and <span>C#</span> ill also
+            have knwoledge in <span>Adobe Photoshop </span> and
+            <span>Adobe Premier</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-----Skill section start----------->
+    <div class="skill">
+      <div class="skill-title">
+        <h2>My skills</h2>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-card">
+          <i class="fa fa-bars"></i>
+          <h5>Web Designing</h5>
+          <div class="skill-text">
+            <p>
+              I have a skill at Intermidiate Designing in Web Development and
+              Experience i have basic knowlede in PHP and MySQL and javascript
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa fa-user"></i>
+          <h5>Photo Editing</h5>
+          <div class="skill-text">
+            <p>
+              I have skill on Editing Photos using Photoshops and making
+              emoticons and making facebook cover photos and twitch banners and
+              panels for steamers that i used in the past for side line works
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa fa-bell"></i>
+          <h5>Video Editing</h5>
+          <div class="skill-text">
+            <p>
+              I also have Basic Knowledege in Video Editing I use this skills on
+              making money making montage for streamers and making youtube
+              intro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Contact Me------>
+    <div class="contact-me">
+      <p>Let Me Get You A Beautiful Website.</p>
+      <a class="contact-button" href="#">Contact Me</a>
+    </div>
+
+    <!---Made in-->
+    <div class="icon">
+      <div class="icon-title">
+        <h2>Made in</h2>
+      </div>
+      <div class="icon-box">
+        <div class="icon-card">
+          <div class="icon-text">
+            <img src="icons/icons8-html-5.svg" alt="htmlicon" class="icon1" />
+          </div>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-text">
+            <img src="icons/icons8-css3.svg" alt="htmlicon" class="icon1" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------footer start--------->
+    <footer>
+      <p>Lowelljay Brosoto</p>
+      <p>Here are my Socail media Account you can Follow me Here.</p>
+      <div class="social">
+        <a href="#"><i class="fa fa-facebook-f"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+      <p class="end">Created By LOWELLJAY</p>
+    </footer>
+  </body>
+</html>
